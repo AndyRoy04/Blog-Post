@@ -1,7 +1,9 @@
 from datetime import date
 from flask import Flask, abort, render_template, redirect, url_for, flash
+from flask import globals as flask_globals
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
+flask_gravatar._request_ctx_stack = flask_globals.request_ctx
 from flask_gravatar import Gravatar
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
